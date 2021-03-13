@@ -43,6 +43,7 @@ import { EditTaskComponent } from './components/edit-task/edit-task.component';
 import { UsersComponent } from './components/users/users.component';
 import { FilesComponent } from './components/files/files.component';
 import { EditUserComponent } from './components/edit-user/edit-user.component';
+import { TestComponent } from './components/test/test.component';
 
 
 @NgModule({
@@ -74,7 +75,8 @@ import { EditUserComponent } from './components/edit-user/edit-user.component';
     EditTaskComponent,
     UsersComponent,
     FilesComponent,
-    EditUserComponent
+    EditUserComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
