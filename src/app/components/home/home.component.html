@@ -1,0 +1,37 @@
+<app-navigation></app-navigation>
+<div class="top-box"></div>
+<carousel class="carousal"
+    height="400" 
+    cellToShow="1" 
+    cellWidth="100%" 
+    dots="true" 
+    pauseOnHover="true"
+    [images]="images">
+</carousel>
+
+<div class="container container1">
+    <h1 style="color:#0275d8; font-weight: bold;">Project ABC</h1>
+    <p>A project is a series of related a tasks which when they are carried in the correct order will lead to the completion of the project. Projects are temporary, generally resulting in the creation of a tangible product or outcome. This is as opposed to a programme, which is a series of interrelated projects that may be carried out repeatedly or continuously in order to support an ongoing process. For more information, see Project v programme.
+
+        A construction project, sometimes just referred to as a ‘project’, is the organised process of constructing, renovating, refurbishing, etc. a building, structure or infrastructure. The project process typically starts with an overarching requirement which is developed through the creation of a brief, feasibility studies, option studies, design, financing and construction.</p>
+</div>
+
+<div class="container container2">
+    <div class="container blocks">
+        <button type="button" class="btn btn-outline-primary button" (click)="navigate(1)">Block 1 &nbsp; {{percentage_block1}}%</button>
+        <button type="button" class="btn btn-outline-primary button" (click)="navigate(2)">Block 2 &nbsp; 30%</button>
+        <button type="button" class="btn btn-outline-primary button" (click)="navigate(3)">Block 3 &nbsp; 10%</button>
+    </div>
+    <div class="container todo">
+        <div class="title">Todo Tasks</div>
+        <div class="container cards">        
+            <div *ngFor="let task of tasks; index as i;">
+                <div class="card text-white bg-primary todoCard" (click)="open(task._id)">
+                    <div class="card-body">
+                        <p class="card-title" style="text-align: center;font-size: 120%;">{{task.taskName}}</p>
+                      </div>
+                </div>
+            </div>        
+        </div>
+    </div>
+</div>
