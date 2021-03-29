@@ -17,10 +17,10 @@
 const express = require('express');
 
 var app = express();
-app.use(express.static('./dist/Front'));
+app.use(express.static('./dist/Front-end'));
 
 app.get('/*', function(req, res) {
-  res.sendFile('index.html', {root: 'dist/Front/'});
+  res.sendFile('index.html', {root: 'dist/Front-end/'});
 });
 
 app.listen(process.env.PORT || 8080);
